@@ -1,5 +1,7 @@
 # Foro 1
 
+A continuación el objetivo del foro es comentar sobre la experiencia de instalar la librería **OpenCV** sobre el sistema operativo **Ubuntu** **Linux**, hacerlo en una maquina virtual.
+
 ## Edges
 
 Uses `Canny()` method of **OpenCV** to show the edges of the image given.
