@@ -4,15 +4,15 @@ Desarrolle un video tutorial de 5 minutos explicando el funcionamiento del progr
 
 ```bash
 sudo apt-get install xfce4
-``` 
+```
 
 Utilizar una webcam en el entorno grafico. Suba el código fuente y el video en una carpeta zip o link del video.
 
 ## Project purpose
 
-The purpose of this project is to capture *images/frames* from a video given for example: [smile.mp4](../../../public/assets/smile.mp4). This will take pictures of every frame were it recognizes a human face. This will leave all the `.jpg` images created in the folder [data/rosy](../../../public/data/rosy/) (we use `rosy` as an example but it can be changed). 
+The purpose of this project is to capture *images/frames* from a video given for example: [smile.mp4](../../../public/assets/smile.mp4). This will take pictures of every frame were it recognizes a human face. This will leave all the `.jpg` images created in the folder [data/rosy](../../../public/data/rosy/) (we use `rosy` as an example but it can be changed).
 
-Once the pictures are captured the next file will be trained with this images recognized and will generate a `.xml` file created in [data/](../../../public/data/) that will be our model that will know the recognition of the face we recorded. 
+Once the pictures are captured the next file will be trained with this images recognized and will generate a `.xml` file created in [data/](../../../public/data/) that will be our model that will know the recognition of the face we recorded.
 
 Finally the next file will recognize our model file and will tell if the faces saved in our model are a match or not. This will show a rectangle in the face showing in color green if the face is recognized or red if the face is unkown.
 
@@ -23,7 +23,6 @@ Finally the next file will recognize our model file and will tell if the faces s
 2. [tarea-1/train.py](./train.py)
 
 3. [tarea-1/recognize.py](./recognize.py)
-
 
 ## Capture
 

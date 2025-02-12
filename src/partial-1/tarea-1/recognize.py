@@ -76,7 +76,8 @@ while True:
             # Print above the rectangle the name of the person recognized in green.
             cv2.putText(
                 frame,
-                "Known"(x, y - 25),
+                "Known",
+                (x, y - 25),
                 2,
                 1.1,
                 (0, 255, 0),
