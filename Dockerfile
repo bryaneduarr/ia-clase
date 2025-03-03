@@ -11,3 +11,15 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libxkbcommon-x11-0 \
   python3-opencv \
   libopencv-dev
+
+COPY requirements.txt /workspace/requirements.txt
+  
+# Set up a working directory
+WORKDIR /workspace
+  
+RUN pip install -r requirements.txt
+  
+  # Copy project files
+COPY . /workspace
+
+CMD ["bash"]
