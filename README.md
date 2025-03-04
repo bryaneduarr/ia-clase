@@ -18,7 +18,7 @@ docker-compose up --build
 
 If you are using [Visual Studio Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) then use the **Visual Studio Code** editor and clone this repository using the command:
 
-```
+```bash
 git clone
 ```
 

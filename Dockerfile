@@ -10,7 +10,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libqt5network5 \
   libxkbcommon-x11-0 \
   python3-opencv \
-  libopencv-dev
+  libopencv-dev \
+  x11-xserver-utils
 
 COPY requirements.txt /workspace/requirements.txt
   
