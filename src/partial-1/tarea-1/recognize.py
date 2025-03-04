@@ -1,12 +1,14 @@
-import cv2
+""" This module provides os functionality"""
 import os
+import sys
+import cv2
 
 # General paths to follow.
 current_dir = os.path.dirname(os.path.abspath(__file__))
 public_path = os.path.join(current_dir, "../../../public/")
 data_path = os.path.join(public_path, "data")
 model_path = os.path.join(data_path, "eigen-face-model.xml")
-person_name = "rosy"
+PERSON_NAME= "rosy"
 
 # People list on the 'data/' directory.
 people_list = os.listdir(data_path)
@@ -19,14 +21,14 @@ model.read(model_path)
 
 # Path to the Haar cascade file.
 haar_path = os.path.join(
-    public_path, "data", person_name, "haarcascade_frontalface_default.xml"
+    public_path, "data", PERSON_NAME, "haarcascade_frontalface_default.xml"
 )
 faceClassif = cv2.CascadeClassifier(haar_path)
 
 # Validate if the Haar cascade file exists.
 if not os.path.exists(haar_path):
     print("error: Haar cascade file not found.", haar_path)
-    exit(1)
+    sys.exit(1)
 
 # Path to the video file.
 video_path = os.path.join(public_path, "assets", "smile.mp4")
@@ -35,7 +37,7 @@ cap = cv2.VideoCapture(video_path)
 # Validate if the video file exists.
 if not cap.isOpened:
     print("error: Can not open video.")
-    exit(1)
+    sys.exit(1)
 
 while True:
     ret, frame = cap.read()
@@ -63,7 +65,7 @@ while True:
         # Print if the face is known on top of the image.
         cv2.putText(
             frame,
-            "{}".format(result),
+            f"{result}".format(result),
             (x, y - 5),
             1,
             1.3,

@@ -1,6 +1,7 @@
+""" This module provides os functionality"""
+import os
 import numpy as np
 import cv2
-import os
 
 # General paths to follow.
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +14,7 @@ print(f"People list: {people_list}")
 
 facesData = []
 labels = []
-label = 0
+LABEL = 0
 
 for name_dir in people_list:
     person_path = os.path.join(data_path, name_dir)
@@ -33,12 +34,12 @@ for name_dir in people_list:
 
         # Append image and label to the lists.
         facesData.append(image)
-        labels.append(label)
+        labels.append(LABEL)
 
         cv2.imshow("Image", image)
         cv2.waitKey(10)
 
-    label += 1
+    LABEL += 1
 
 # Print label statistics after reading images.
 print("Labels: ", labels)
