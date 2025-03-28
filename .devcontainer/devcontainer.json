@@ -19,7 +19,12 @@
 				"ms-python.vscode-pylance",
 				"ms-python.python",
 				"ms-python.debugpy",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"rogalmic.bash-debug",
+				"mads-hartmann.bash-ide-vscode",
+				"rpinski.shebang-snippets",
+				"foxundermoon.shell-format",
+				"timonwong.shellcheck"
 			]
 		}
 	},

@@ -12,3 +12,18 @@ services:
     stdin_open: true
     tty: true
     command: /bin/bash
+    depends_on:
+      - mysql
+  
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: uth1234
+      MYSQL_DATABASE: triangulos
+      MYSQL_USER: Developer
+      MYSQL_PASSWORD: uth1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
